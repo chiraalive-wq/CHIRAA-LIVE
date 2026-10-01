@@ -15,32 +15,42 @@
 }
 
 body{
-    background:#080808;
+    background:#050505;
     color:white;
 }
 
 header{
-    background:linear-gradient(135deg,#111,#1f1f1f);
+    background:#111;
+    border-bottom:3px solid #ff1744;
     padding:20px;
     text-align:center;
-    border-bottom:2px solid #ff1744;
 }
 
 .logo{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #ff1744;
+    box-shadow:0 0 20px #ff1744;
+}
+
+.logo-text{
+    margin-top:10px;
     font-size:32px;
     font-weight:bold;
     color:#ff1744;
 }
 
 nav{
-    margin-top:15px;
+    margin-top:20px;
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 10px;
-    font-size:15px;
+    margin:0 12px;
+    font-size:18px;
 }
 
 nav a:hover{
@@ -48,14 +58,15 @@ nav a:hover{
 }
 
 .hero{
-    min-height:500px;
+    min-height:650px;
     display:flex;
     justify-content:center;
     align-items:center;
     text-align:center;
     padding:30px 20px;
+
     background:
-    radial-gradient(circle at center,#351018,#080808 65%);
+    radial-gradient(circle at center,#350d18 0%,#090909 45%,#000 100%);
 }
 
 .hero h1{
@@ -68,75 +79,88 @@ nav a:hover{
 }
 
 .hero p{
-    font-size:18px;
-    color:#ccc;
-    margin-bottom:25px;
-}
-
-.btn{
-    display:inline-block;
-    background:#ff1744;
-    color:white;
-    padding:14px 28px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.btn:hover{
-    background:#d50032;
-}
-
-section{
-    padding:60px 20px;
-    max-width:1000px;
-    margin:auto;
-}
-
-.title{
-    text-align:center;
-    font-size:32px;
+    font-size:20px;
+    color:#ddd;
     margin-bottom:30px;
 }
 
-.card{
-    background:#151515;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:20px;
-    border:1px solid #292929;
+.buttons a{
+    display:inline-block;
+    padding:15px 30px;
+    margin:8px;
+    border-radius:30px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    background:#ff1744;
+    box-shadow:0 0 15px #ff1744;
 }
 
-.card h3{
-    color:#ff1744;
-    margin-bottom:10px;
+.buttons a:hover{
+    transform:scale(1.05);
 }
 
-.social{
+section{
+    padding:70px 20px;
     text-align:center;
 }
 
-.social a{
-    display:inline-block;
-    margin:8px;
+section h2{
+    font-size:35px;
+    color:#ff1744;
+    margin-bottom:20px;
+}
+
+.card{
+    max-width:700px;
+    margin:auto;
+    background:#111;
+    padding:30px;
+    border-radius:15px;
+    border:1px solid #333;
 }
 
 footer{
-    text-align:center;
-    padding:25px;
     background:#111;
-    color:#888;
-    border-top:1px solid #222;
+    padding:30px;
+    text-align:center;
+    border-top:2px solid #ff1744;
+}
+
+footer p{
+    color:#aaa;
 }
 
 @media(max-width:600px){
+
+    .logo{
+        width:75px;
+        height:75px;
+    }
+
+    .logo-text{
+        font-size:27px;
+    }
+
+    nav a{
+        margin:0 6px;
+        font-size:15px;
+    }
+
+    .hero{
+        min-height:600px;
+    }
+
     .hero h1{
         font-size:40px;
     }
 
-    nav a{
-        display:inline-block;
-        margin:6px;
+    .hero p{
+        font-size:17px;
+    }
+
+    section h2{
+        font-size:30px;
     }
 }
 </style>
@@ -145,94 +169,175 @@ footer{
 <body>
 
 <header>
-    <div class="logo">🔴 CHIRAA LIVE</div>
 
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#live">Live</a>
-        <a href="#gaming">Gaming</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<!-- CHIRAA LIVE LOGO -->
+<img class="logo" src="logo.jpg" alt="CHIRAA LIVE">
+
+<div class="logo-text">
+🔴 CHIRAA LIVE
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#live">Live</a>
+<a href="#gaming">Gaming</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
 </header>
 
-<section class="hero" id="home">
-    <div>
-        <h1>WELCOME TO <span>CHIRAA LIVE</span></h1>
-        <p>Live Streams • Gaming • Entertainment</p>
 
-        <a class="btn"
-           href="https://www.youtube.com/"
-           target="_blank">
-           ▶ WATCH ON YOUTUBE
-        </a>
-    </div>
-</section>
+<!-- HOME -->
+
+<div class="hero" id="home">
+
+<div>
+
+<h1>
+WELCOME TO<br>
+<span>CHIRAA LIVE</span>
+</h1>
+
+<p>
+Live Streams • Gaming • Entertainment
+</p>
+
+<div class="buttons">
+
+<a href="https://youtube.com/@chiraalive" target="_blank">
+▶ WATCH ON YOUTUBE
+</a>
+
+<a href="https://www.tiktok.com/@chiraalive1" target="_blank">
+♪ FOLLOW ON TIKTOK
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- LIVE -->
 
 <section id="live">
-    <h2 class="title">🔴 LIVE NOW</h2>
 
-    <div class="card">
-        <h3>CHIRAA LIVE STREAM</h3>
-        <p>
-            Welcome to CHIRAA LIVE!  
-            Join the live streams and enjoy gaming and entertainment.
-        </p>
-    </div>
+<h2>🔴 LIVE STREAMS</h2>
+
+<div class="card">
+
+<p>
+Welcome to CHIRAA LIVE!<br><br>
+Watch our latest live streams and entertainment content.
+</p>
+
+<br>
+
+<div class="buttons">
+
+<a href="https://youtube.com/@chiraalive" target="_blank">
+▶ YouTube Channel
+</a>
+
+</div>
+
+</div>
+
 </section>
+
+
+<!-- GAMING -->
 
 <section id="gaming">
-    <h2 class="title">🎮 GAMING</h2>
 
-    <div class="card">
-        <h3>Gaming Channel</h3>
-        <p>
-            Gaming videos, live streams, gameplay and entertainment
-            from CHIRAA LIVE.
-        </p>
-    </div>
+<h2>🎮 GAMING</h2>
+
+<div class="card">
+
+<p>
+Gaming • Live Gameplay • Entertainment
+</p>
+
+<br>
+
+<p>
+Follow CHIRAA LIVE for gaming videos,
+live streams and new content.
+</p>
+
+</div>
+
 </section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
-    <h2 class="title">👤 ABOUT CHIRAA LIVE</h2>
 
-    <div class="card">
-        <p>
-            CHIRAA LIVE is a gaming and entertainment platform.
-            Stay connected for live streams, gaming videos and
-            new content.
-        </p>
-    </div>
+<h2>ABOUT CHIRAA LIVE</h2>
+
+<div class="card">
+
+<p>
+Welcome to <b>CHIRAA LIVE</b> ❤️
+</p>
+
+<br>
+
+<p>
+Live Streams • Gaming • Entertainment
+</p>
+
+<br>
+
+<p>
+Subscribe to our YouTube channel
+and follow us on TikTok.
+</p>
+
+</div>
+
 </section>
+
+
+<!-- CONTACT -->
 
 <section id="contact">
-    <h2 class="title">📱 FOLLOW CHIRAA LIVE</h2>
 
-    <div class="social">
+<h2>CONTACT</h2>
 
-        <a class="btn"
-           href="https://www.youtube.com/"
-           target="_blank">
-           YouTube
-        </a>
+<div class="card">
 
-        <a class="btn"
-           href="https://www.facebook.com/"
-           target="_blank">
-           Facebook
-        </a>
+<p>
+For business and collaboration inquiries,
+contact CHIRAA LIVE through our social media.
+</p>
 
-        <a class="btn"
-           href="https://www.tiktok.com/"
-           target="_blank">
-           TikTok
-        </a>
+<br>
 
-    </div>
+<div class="buttons">
+
+<a href="https://youtube.com/@chiraalive" target="_blank">
+YouTube
+</a>
+
+<a href="https://www.tiktok.com/@chiraalive1" target="_blank">
+TikTok
+</a>
+
+</div>
+
+</div>
+
 </section>
 
+
 <footer>
-    © 2026 CHIRAA LIVE • All Rights Reserved
+
+<p>© 2026 CHIRAA LIVE • All Rights Reserved</p>
+
 </footer>
 
 </body>
